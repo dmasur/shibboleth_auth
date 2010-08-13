@@ -1,0 +1,5 @@
+ShibbolethAuth::UsernameField = 'HTTP_SHIB_INETORGPERSON_UID'
+ShibbolethAuth::FullNameField = 'HTTP_SHIB_PERSON_COMMONNAME'
+ShibbolethAuth::GroupsField = 'HTTP_SHIB_EP_ENTITLEMENT'
+ShibbolethAuth::AffiliationField = 'HTTP_SHIB_EP_UNSCOPEDAFFILIATION'
+ShibbolethAuth::GroupPrefixField = 'my:prefix:group'

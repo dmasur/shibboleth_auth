@@ -14,4 +14,4 @@ Description goes here.
 
 == Copyright
 
-Copyright (c) 2010 Dominik. See LICENSE for details.
+Copyright (c) 2010 Dominik Masur. See LICENSE for details.

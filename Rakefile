@@ -5,13 +5,14 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "shibboleth_auth"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{Support for Shibboleth Auth}
+    gem.description = %Q{Adds a Userobject and a debug Login/Logout to your Railsapplication}
     gem.email = "masur@rz.rwth-aachen.de"
     gem.homepage = "http://github.com/TBAA/shibboleth_auth"
-    gem.authors = ["Dominik"]
+    gem.authors = ["Dominik Masur"]
     gem.add_development_dependency "rspec", ">= 1.2.9"
-    gem.add_development_dependency "cucumber", ">= 0"
+    gem.add_development_dependency "cucumber", ">= 0.8.5"
+    gem.add_development_dependency "haml", ">= 3.0.0"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
