@@ -23,7 +23,7 @@ class ShibbolethAuth::LoginController < ApplicationController
   # GET /shibboleth_auth/logout
   def logout
     session[:shibboleth_debug_login] = false
-    session[:shibboleth] = nil
+    session[:shibboleth_debug_env] = nil
     redirect_to :root
   end
 end
