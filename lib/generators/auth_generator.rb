@@ -15,6 +15,10 @@ module ShibbolethAuth
         'app/views/shibboleth_auth/login/login_form.html.haml'
       )
       copy_file(
+        'app/views/shibboleth_auth/login/show.html.haml',
+        'app/views/shibboleth_auth/login/show.html.haml'
+      )
+      copy_file(
         'config/initializers/shibboleth_auth.rb',
         'config/initializers/shibboleth_auth.rb'
       )

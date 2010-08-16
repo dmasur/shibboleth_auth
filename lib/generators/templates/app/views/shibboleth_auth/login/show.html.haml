@@ -1,0 +1,19 @@
+%p Shibboleth Data:
+%p
+  %b Username:
+  = @current_user.username
+%p
+  %b Common Name:
+  = @current_user.common_name
+%p
+  %b Groups:
+  %br
+  %ul
+    - @current_user.groups.each do |group|
+      %li= group
+%p 
+  %b Affiliation:
+  %br
+  %ul
+    - @current_user.affiliations.each do |affiliation|
+      %li= affiliation

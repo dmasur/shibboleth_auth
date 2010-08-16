@@ -1,3 +1,7 @@
-= form_tag shibboleth_debug_login_url do
-  = text_field_tag :groups
-  = submit_tag
+= semantic_form_for 'shibboleth_debug_login', :url => shibboleth_debug_login_url do |f|
+  = f.inputs "Shibboleth Debug Login" do
+    = f.input :person_uid, :input_html => {:value => ShibbolethAuth::DebugDefaultUsername}
+    = f.input :person_common_name, :input_html => {:value => ShibbolethAuth::DebugDefaultCommonName}
+    = f.input :groups, :input_html => {:value => ShibbolethAuth::DebugDefaultGroups}
+    = f.input :unscoped_affiliation, :input_html => {:value => ShibbolethAuth::DebugDefaultAffiliation}
+  = f.buttons

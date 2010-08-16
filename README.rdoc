@@ -17,6 +17,11 @@ end
 def current_user
   @current_user ||= ShibbolethAuth::ShibbolethUser.new(session[:shibboleth_debug_env] || request.env)
 end
+
+== ToDos
+* Write Cucumber features
+* Write RSpecs
+
 == Note on Patches/Pull Requests
  
 * Fork the project.
