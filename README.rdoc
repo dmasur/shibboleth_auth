@@ -6,13 +6,16 @@ It works only with Rails 3.
 
 == Installation Notes
 1. Add ShibbolethAuth to your Gemfile: gem "shibboleth_auth"
-2. Generate Views and Initializer: rails g shibboleth_auth:install
-3. Modify your Routes:
+
+2. Generate views and initializer: rails g shibboleth_auth:install
+
+3. Modify your routes:
 Radius::Application.routes.draw do
   ...
   shibboleth_routes
   ...
 end
+
 4. Add a current_user method to your ApplicationController
 def current_user
   @current_user ||= ShibbolethAuth::ShibbolethUser.new(session[:shibboleth_debug_env] || request.env)
