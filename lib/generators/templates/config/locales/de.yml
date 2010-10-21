@@ -1,0 +1,6 @@
+de:
+  shibboleth:
+    person_uid: Person UID
+    person_common_name: Name
+    groups: Gruppe
+    unscoped_affiliation: Affiliation
