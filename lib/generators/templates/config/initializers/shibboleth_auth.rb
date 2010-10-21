@@ -20,3 +20,7 @@ ShibbolethAuth::DevelopmentCommonName = 'Development User'
 ShibbolethAuth::DevelopmentGroups = ["my:prefix:group:..."]
 # As Array
 ShibbolethAuth::DevelopmentAffiliation = []
+
+# Admin Users/Group
+ShibbolethAuth::AdminUsers = %w(ab123456)
+ShibbolethAuth::AdminGroups = %w(my:prefix:group:admins)

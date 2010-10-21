@@ -12,6 +12,13 @@ module ShibbolethAuth
       end
     end
     
+    def is_admin?
+      #return true if ["cucumber", "test"].include? Rails.env
+      return true if ShibbolethAuth::AdminUsers.include?(username)
+      return true unless (ShibbolethAuth::AdminGroups & groups).empty?
+      false
+    end
+    
     def initialize(env)
       # Development Settings
       if env["HTTP_HOST"] && ["localhost", "127.0.0.1"].any? {|url| env["HTTP_HOST"].include? url }
