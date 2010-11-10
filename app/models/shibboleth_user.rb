@@ -1,4 +1,3 @@
-
 module ShibbolethAuth
   class ShibbolethUser
     attr_reader :username, :common_name, :groups, :affiliations

@@ -10,9 +10,9 @@ class ShibbolethAuth::LoginController < ApplicationController
 
   # POST /shibboleth_auth/login
   def login
-    # Adding Group Prefix
+    # Check all Groups for Prefixes
     groups = params["shibboleth_debug_login"][:groups].split(";").map do |group|
-      ShibbolethAuth::GroupPrefixField + ":" + group unless group.include?(ShibbolethAuth::GroupPrefixField)
+      check_group_prefix(group)
     end.join(";")
     
     session[:shibboleth_debug_env] = {
@@ -32,4 +32,9 @@ class ShibbolethAuth::LoginController < ApplicationController
     session[:shibboleth_debug_env] = nil
     redirect_to :root
   end
+  private
+    def check_group_prefix group
+      group = ShibbolethAuth::GroupPrefixField + ":" + group unless group.include?(ShibbolethAuth::GroupPrefixField)
+      return group
+    end
 end
