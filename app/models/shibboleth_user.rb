@@ -3,7 +3,7 @@ module ShibbolethAuth
     attr_reader :username, :common_name, :groups, :affiliations
 
     def strip_group_prefix groups
-      groups = groups.split(';') if group.class == String
+      groups = groups.split(';') if groups.class == String
       return groups.select do |s|
         s[0...ShibbolethAuth::GroupPrefixField.length] == ShibbolethAuth::GroupPrefixField
       end.map do |s|
