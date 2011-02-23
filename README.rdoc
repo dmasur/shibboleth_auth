@@ -10,7 +10,7 @@ It works only with Rails 3.
 2. Generate views and initializer: rails g shibboleth_auth:install
 
 3. Modify your routes:
-  Radius::Application.routes.draw do
+  YourApplication::Application.routes.draw do
     ...
     shibboleth_routes
     ...
@@ -21,6 +21,7 @@ It works only with Rails 3.
     @current_user ||= ShibbolethAuth::ShibbolethUser.new(session[:shibboleth_debug_env] || request.env)
   end
 
+5. You can now access username, common_name, groups and 
 == ToDos
 * Write Cucumber features
 * Write RSpecs
