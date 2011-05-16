@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{shibboleth_auth}
-  s.version = "0.3.2"
+  s.version = "0.3.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Dominik Masur"]
@@ -24,7 +24,7 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "app/controllers/login_controller.rb",
-     "app/models/shibboleth_user.rb",
+     "app/models/shibboleth_auth/shibboleth_user.rb",
      "features/shibboleth_auth.feature",
      "features/step_definitions/shibboleth_auth_steps.rb",
      "features/support/env.rb",

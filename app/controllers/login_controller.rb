@@ -1,4 +1,4 @@
-class ShibbolethAuth::LoginController < ApplicationController
+class LoginController < ApplicationController
 
   # GET /shibboleth_auth/login
   def login_form
